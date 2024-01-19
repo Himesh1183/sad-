@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Outfit:wght@700&family=Satisfy&display=swap'); 
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: rgb(156, 137, 197);
+            color: rgb(234, 230, 255);
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #randomText {
+            font-size: 28px;
+            margin-top: 20px;
+            font-family:'Satisfy', sans-serif ;
+            color: azure;
+        }
+        @media (max-width: 600px) {
+            #generateButton {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            #generateButton:hover{
+            background-color:  rgb(67, 55, 95);
+        }
+
+            #randomText {
+            font-size: 19px;
+            margin-top: 18px;
+            padding: 8px;
+            font-family:'Satisfy', sans-serif ;
+        }
+    }
+
+        #generateButton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 27.5px;
+            height: 55px;
+            width: 200px;
+            font-size: 20px;
+            cursor: pointer;
+            font-family:'Outfit', sans-serif ;
+            background-color:  rgb(116, 95, 162);
+            color: azure;
+        }
+        #generateButton:hover{
+            background-color:  rgb(67, 55, 95);
+        }
+        
+    </style>
+    <title>Feeling Sad?? Here's something for u</title>
+</head>
+<body>
+
+<h1>Feeling Sad?? Here's something for u</h1>
+<button id="generateButton" onclick="generateRandomText()">Click hereee</button>
+<p id="randomText"></p>
+
+<script>
+    const texts = [
+        "Sometimes weak and wan, sometimes strong and full of light. The moon understands what it means to be human",
+        "So, this is my life. And I want you to know that I am both happy and sad and I'm still trying to figure out how that could be",
+        "You are braver than you believe, stronger than you seem, and smarter than you think. But the most important thing is, even if we're apart…I'll always be with you.",
+        "Memory is a mean thing, slicing at you from the harshest angles, dipping your consciousness into the wrong colors again and again. A moment of humiliation, or devastation, or absolute rage, to be rewound and replayed, spinning a thread that wraps around the brain, knotting itself into something of a noose. It won't exactly kill you, but it makes you feel the squeeze of every horrible moment",
+        "The purpose of memory is to remind us how to live.",
+        "Believing is a type of magic. It can make something true.",
+        "It’s okay to be afraid. But not okay if be afraid means you do nothing. You must not do nothing. That’s not life worth living.",
+        "It was a dream, i knew it wasn't but still. We kissed, and I was every color in the world, alight.",
+        "You love who you love. There's no changing that.",
+        "Maybe that's where all the other colours are hiding - in a dimenson of the world we just can't see, between our sky and the rest of the universe.",
+        "Wherever you are, at any moment, try and find something beautiful. A face, a line out of a poem, the clouds out of a window, some graffiti, a wind farm. Beauty cleans the mind.",
+        "Maybe love is just about finding the person you can be your weird self with.",
+        "To other people, it sometimes seems like nothing at all. You are walking around with your head on fire and no one can see the flames.",
+        "Depression is also smaller than you. Always, it is smaller than you, even when it feels vast. It operates within you, you do not operate within it. ",
+        "If you are the type of person who thinks too much about stuff then there is nothing lonelier in the world than being surrounded by a load of people on a different wavelength.",
+        "Life is waiting for you. You might be stuck here for a while, but the world isn’t going anywhere. Hang on in there if you can. Life is always worth it.",
+        "You can be a depressive and be happy, just as you can be a sober alcoholic",
+        "Just when you feel you have no time to relax, know that this is the moment you most need to make time to relax",
+    ];
+
+    function generateRandomText() {
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        document.getElementById("randomText").textContent = texts[randomIndex];
+    }
+</script>
+
+</body>
+</html>
